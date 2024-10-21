@@ -1,0 +1,5 @@
+﻿CREATE OR REPLACE VIEW personal_data_crm FOLDER = '/3- derived views' AS SELECT client.client_id AS client_id, client.name AS name, client.surname AS surname, client.client_type AS client_type, address.street AS street, address.city AS city, address.zip AS zip, address.state AS state, address.primary_phone AS primary_phone, client_type.code AS code, client_type.value AS value FROM client AS client INNER JOIN address AS address ON client.client_id = address.client_fid  CROSS JOIN client_type AS client_type;
+
+ALTER VIEW personal_data_crm
+ LAYOUT (client = [217, 151, 200, 200], address = [577, 48, 200, 200], client_type = [549, 265, 200, 200]);
+

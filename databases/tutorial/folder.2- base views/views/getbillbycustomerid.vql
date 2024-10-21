@@ -32,7 +32,7 @@ CREATE OR REPLACE TYPE getbillbycustomerid_return_bill AS REGISTER OF (ssn:text,
 
 CREATE OR REPLACE TYPE getbillbycustomerid_return AS ARRAY OF getbillbycustomerid_return_bill;
 
-CREATE OR REPLACE TABLE getbillbycustomerid_return I18N us_mst (
+CREATE OR REPLACE TABLE getbillbycustomerid I18N us_mst (
         customer_id:text,
         return:getbillbycustomerid_return
     )

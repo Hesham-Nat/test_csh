@@ -7,6 +7,6 @@
 /databases/tutorial/folder.2- base views/views/client_type.vql
 /databases/tutorial/folder.3- derived views/views/personal_data_crm.vql
 /databases/tutorial/folder.1 - first steps/datasources/ws/soap_billing_ds.vql
-/databases/tutorial/folder.2- base views/views/getbillbycustomerid.vql
+/databases/tutorial/folder.2- base views/views/getbillbycustomerid_return.vql
 /databases/tutorial/folder.2- base views/views/billing_information.vql
 /databases/tutorial/folder.3- derived views/views/client_with_bills.vql

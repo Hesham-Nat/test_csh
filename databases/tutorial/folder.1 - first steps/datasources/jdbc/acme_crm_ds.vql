@@ -1,0 +1,37 @@
+﻿# REQUIRES-PROPERTIES-FILE - # Do not remove this comment!
+CREATE OR REPLACE DATASOURCE JDBC acme_crm_ds
+    FOLDER = '/1 - first steps'
+    DRIVERCLASSNAME = 'com.mysql.cj.jdbc.Driver'
+    DATABASEURI = '${databases.tutorial.folder.1 - first steps.datasources.jdbc.acme_crm_ds.DATABASEURI}'
+    USERNAME = '${databases.tutorial.folder.1 - first steps.datasources.jdbc.acme_crm_ds.USERNAME}'
+    USERPASSWORD = '${databases.tutorial.folder.1 - first steps.datasources.jdbc.acme_crm_ds.USERPASSWORD}' ${databases.tutorial.folder.1 - first steps.datasources.jdbc.acme_crm_ds.USERPASSWORD.ENCRYPTED}
+    CLASSPATH = 'mysql-8'
+    DATABASENAME = 'mysql'
+    DATABASEVERSION = '8'
+    FETCHSIZE = 1000
+    VALIDATIONQUERY = 'Select 1'
+    INITIALSIZE = 4
+    MAXIDLE = -1
+    MINIDLE = 0
+    MAXACTIVE = 20
+    EXHAUSTEDACTION = 1
+    TESTONBORROW = true
+    TESTONRETURN = false
+    TESTWHILEIDLE = false
+    TIMEBETWEENEVICTION = -1
+    NUMTESTPEREVICTION = 3
+    MINEVICTABLETIME = 1800000
+    POOLPREPAREDSTATEMENTS = false
+    MAXOPENPREPAREDSTATEMENTS = -1
+    PROPERTIES ('vdp.streamRows'='yes', 'allowLoadLocalInfile'='true')
+    DATA_LOAD_CONFIGURATION (
+        BATCHINSERTSIZE = 200
+        USEEXTERNALTABLES ( 
+            ONMOVEREAD = false,
+            ONMOVEWRITE = true
+        )
+    )
+    SOURCECONFIGURATION (
+        delegatescalarfunctionslist = (abs, acos, addday, addhour, addminute, addmonth, addsecond, addweek, addyear, ascii, asin, atan, atan2, case, cast, ceil, char, coalesce, concat, convert_timezone, convert_timezone(evaluate_literal), cos, cot, current_date, degrees, div, exp, expression_list, firstdayofmonth, floor, formatdate, getday, getdayofweek, getdayofyear, getdaysbetween, gethour, getmicrosecond, getmillisecond, getminute, getmonth, getmonthsbetween, getnanosecond, getsecond, gettimeinmillis, getweek, getyear, instr, lastdayofmonth, len, ln, localtimestamp(evaluate_literal), log, lower, ltrim, max, min, mod, mult, now, nullif, pi, position, pow, power, radians, rand, removeaccents, repeat, replace, round, rtrim, sign, sin, sql_trim, sqrt, substr, substring, subtract, sum, tan, textcat, textconstant, to_date, to_localdate, to_time, to_timestamp, trim, trunc, upper)
+    );
+

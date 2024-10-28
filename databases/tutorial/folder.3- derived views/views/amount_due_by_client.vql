@@ -1,0 +1,5 @@
+﻿CREATE OR REPLACE VIEW amount_due_by_client FOLDER = '/3- derived views' AS SELECT surname AS surname, name AS name, client_id AS client_id, sum(cast('float', amount_due)) AS total_amount FROM client_with_bills GROUP BY surname, name, client_id;
+
+ALTER VIEW amount_due_by_client
+ LAYOUT (client_with_bills = [20, 20, 200, 200]);
+

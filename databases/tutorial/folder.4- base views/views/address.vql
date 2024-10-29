@@ -1,8 +1,8 @@
 ﻿# REQUIRES-PROPERTIES-FILE - # Do not remove this comment!
 CREATE OR REPLACE WRAPPER JDBC address
-    FOLDER = '/2- base views'
+    FOLDER = '/4- base views'
     DATASOURCENAME=acme_crm_ds
-    CATALOGNAME='${databases.tutorial.folder.2- base views.views.jdbc.address.CATALOGNAME}' 
+    CATALOGNAME='${databases.tutorial.folder.4- base views.views.jdbc.address.CATALOGNAME}' 
     RELATIONNAME='address' 
     OUTPUTSCHEMA (
         client_fid = 'client_fid' :'java.lang.String' (OPT) (sourcetyperadix='10', sourcetypesize='50', description='', sourcetypeid='12', sourcetypename='VARCHAR')  NOT NULL SORTABLE,
@@ -21,7 +21,7 @@ CREATE OR REPLACE TABLE address I18N us_mst (
         state:text (sourcetypeid = '12', sourcetyperadix = '10', sourcetypesize = '100', description = ''),
         primary_phone:text (sourcetypeid = '12', sourcetyperadix = '10', sourcetypesize = '100', description = '')
     )
-    FOLDER = '/2- base views'
+    FOLDER = '/4- base views'
     CACHE OFF
     TIMETOLIVEINCACHE DEFAULT
     ADD SEARCHMETHOD address(

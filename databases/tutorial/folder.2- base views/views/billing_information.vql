@@ -1,5 +1,0 @@
-﻿CREATE OR REPLACE VIEW billing_information FOLDER = '/2- base views' AS SELECT customer_id AS customer_id, amount_due AS amount_due, billing_id AS billing_id, billing_end_date AS billing_end_date, due_date AS due_date, package_id AS package_id, balance AS balance, billing_start_date AS billing_start_date, billing_period_id AS billing_period_id, ssn AS ssn, phone_center AS phone_center, tax_id AS tax_id FROM FLATTEN getbillbycustomerid AS v ( v.return);
-
-ALTER VIEW billing_information
- LAYOUT (getbillbycustomerid = [20, 20, 200, 200]);
-

@@ -1,5 +1,5 @@
 ﻿CREATE OR REPLACE WRAPPER WS getbillbycustomerid
-    FOLDER = '/2- base views'
+    FOLDER = '/4- base views'
     DATASOURCENAME=soap_billing_ds
     SERVICENAME='BillProviderService'
     PORTNAME='BillProvider'
@@ -36,7 +36,7 @@ CREATE OR REPLACE TABLE getbillbycustomerid I18N us_mst (
         customer_id:text,
         return:getbillbycustomerid_return
     )
-    FOLDER = '/2- base views'
+    FOLDER = '/4- base views'
     CACHE OFF
     TIMETOLIVEINCACHE DEFAULT
     ADD SEARCHMETHOD getbillbycustomerid(
